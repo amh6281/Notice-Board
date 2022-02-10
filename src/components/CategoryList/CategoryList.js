@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import dummy from "../../db/data.json";
 
 export default function CategoryList() {
@@ -5,7 +6,11 @@ export default function CategoryList() {
   return (
     <ul>
       {dummy.categorys.map((category) => (
-        <li key={category.id}>Category {category.category}</li>
+        <li key={category.id}>
+          <Link to={`/category/${category.category}`}>
+            Category {category.category}
+          </Link>
+        </li>
       ))}
     </ul>
   );
