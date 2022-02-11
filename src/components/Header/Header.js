@@ -6,7 +6,7 @@ export default function Header() {
     <Wrapper>
       <Content>
         <Link to="/">게시판</Link>
-        <a href="/">새 글 쓰기</a>
+        <Link to="/create_post">새 글 쓰기</Link>
       </Content>
     </Wrapper>
   );
