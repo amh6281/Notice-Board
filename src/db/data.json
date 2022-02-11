@@ -22,20 +22,6 @@
       "delete": false
     },
     {
-      "id": 2,
-      "category": 1,
-      "title": "Hi",
-      "contents": "안녕하세요!",
-      "delete": false
-    },
-    {
-      "id": 3,
-      "category": 2,
-      "title": "World",
-      "contents": "반가워요",
-      "delete": false
-    },
-    {
       "id": 4,
       "category": 2,
       "title": "New post",
