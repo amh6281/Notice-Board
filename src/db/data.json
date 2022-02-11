@@ -47,6 +47,12 @@
       "title": "하잉",
       "contents": "하이용",
       "id": 7
+    },
+    {
+      "category": "1",
+      "title": "안녕하십니까",
+      "contents": "제가왔습니다",
+      "id": 8
     }
   ]
 }

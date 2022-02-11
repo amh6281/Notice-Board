@@ -26,6 +26,7 @@ export default function Category() {
   return (
     <div>
       <h2>Category {category}</h2>
+      {posts.length === 0 && <span>Loading...</span>}
       <div>
         {posts.map((post) => (
           <Post post={post} key={post.id} />

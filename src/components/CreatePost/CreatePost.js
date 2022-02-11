@@ -1,30 +1,35 @@
 import useFetch from "../../hooks/useFetch";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function CreatePost() {
   const categorys = useFetch("http://localhost:3001/categorys");
   const navigate = useNavigate();
+  const [isLoading, setIsLoading] = useState(false);
 
   function onSubmit(e) {
     e.preventDefault();
 
-    fetch(`http://localhost:3001/posts/`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        category: categoryRef.current.value,
-        title: titleRef.current.value,
-        contents: contentsRef.current.value,
-      }),
-    }).then((res) => {
-      if (res.ok) {
-        alert("게시글이 작성되었습니다.");
-        navigate(`/category/${categoryRef.current.value}`);
-      }
-    });
+    if (!isLoading) {
+      setIsLoading(true);
+      fetch(`http://localhost:3001/posts/`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          category: categoryRef.current.value,
+          title: titleRef.current.value,
+          contents: contentsRef.current.value,
+        }),
+      }).then((res) => {
+        if (res.ok) {
+          alert("게시글이 작성되었습니다.");
+          navigate(`/category/${categoryRef.current.value}`);
+          setIsLoading(false);
+        }
+      });
+    }
   }
 
   const categoryRef = useRef(null);
@@ -51,7 +56,13 @@ export default function CreatePost() {
           ))}
         </select>
       </div>
-      <button>저장하기</button>
+      <button
+        style={{
+          opacity: isLoading ? 0.3 : 1,
+        }}
+      >
+        {isLoading ? "Saving..." : "저장하기"}
+      </button>
     </form>
   );
 }

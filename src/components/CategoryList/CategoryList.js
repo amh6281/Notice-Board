@@ -3,6 +3,10 @@ import useFetch from "../../hooks/useFetch";
 
 export default function CategoryList() {
   const categorys = useFetch("http://localhost:3001/categorys");
+
+  if (categorys.length === 0) {
+    return <span>Loading...</span>;
+  }
   // const [categorys, setCategorys] = useState([]);
 
   // useEffect(() => {
