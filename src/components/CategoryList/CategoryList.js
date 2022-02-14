@@ -1,9 +1,8 @@
 import { Link } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
 
-export default function CategoryList() {
+export default function CategoryList({ post: p }) {
   const categorys = useFetch("http://localhost:3001/categorys");
-
   if (categorys.length === 0) {
     return <span>Loading...</span>;
   }

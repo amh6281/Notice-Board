@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  background: darkGray;
+  background: purple;
   padding: 0 20px;
 `;
 

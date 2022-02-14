@@ -29,13 +29,6 @@
       "delete": false
     },
     {
-      "id": 5,
-      "category": 3,
-      "title": "가입했습니다.",
-      "contents": "가입했습니다!",
-      "delete": false
-    },
-    {
       "id": 6,
       "category": 3,
       "title": "잘부탁드려요",
