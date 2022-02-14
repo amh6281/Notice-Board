@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
+import Button from "@mui/material/Button";
+import AllPost from "../AllPost/AllPost";
 
 export default function CategoryList({ post: p }) {
   const categorys = useFetch("http://localhost:3001/categorys");
@@ -19,15 +21,21 @@ export default function CategoryList({ post: p }) {
   // }, []);
 
   return (
-    <ul>
-      {categorys.map((category) => (
-        <li key={category.id}>
-          <Link to={`/category/${category.category}`}>
-            {/*category.category는 dummy data에 있는 categorys의 category*/}
-            Category {category.category}
-          </Link>
-        </li>
-      ))}
-    </ul>
+    <div>
+      <ul>
+        {categorys.map((category) => (
+          <Button variant="contained" key={category.id}>
+            <Link
+              to={`/category/${category.category}`}
+              style={{ textDecoration: "none", color: "white" }}
+            >
+              {/*category.category는 dummy data에 있는 categorys의 category*/}
+              Category {category.category}
+            </Link>
+          </Button>
+        ))}
+      </ul>
+      <AllPost />
+    </div>
   );
 }

@@ -9,11 +9,6 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 export default function Post({ post: p }) {
   const [post, setPost] = useState(p);
-  const [isShow, setIsShow] = useState(false);
-
-  function clickShow() {
-    setIsShow(!isShow);
-  }
 
   function del() {
     if (window.confirm("삭제 하시겠습니까?")) {

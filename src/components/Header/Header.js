@@ -1,24 +1,3 @@
-// import { Wrapper, Content } from "./Header.styles";
-// import { Link } from "react-router-dom";
-// import Fab from "@mui/material/Fab";
-// import EditIcon from "@mui/icons-material/Edit";
-// export default function Header() {
-//   return (
-//     <Wrapper>
-//       <Content>
-//         <Link to="/" style={{ textDecoration: "none" }}>
-//           게시판
-//         </Link>
-//         <Link to="/create_post">
-//           <Fab color="secondary" aria-label="edit">
-//             <EditIcon />
-//           </Fab>
-//         </Link>
-//       </Content>
-//     </Wrapper>
-//   );
-// }
-
 import * as React from "react";
 import { Link } from "react-router-dom";
 import AppBar from "@mui/material/AppBar";
