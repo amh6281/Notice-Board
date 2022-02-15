@@ -37,10 +37,26 @@ export default function Post({ post: p }) {
           <IconButton onClick={del} aria-label="delete">
             <DeleteIcon />
           </IconButton>
-          <Typography>{post.title}</Typography>
+          <Typography
+            style={{
+              display: "table",
+              marginLeft: "auto",
+              marginRight: "auto",
+            }}
+          >
+            {post.title}
+          </Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography>{post.contents}</Typography>
+          <Typography
+            style={{
+              display: "table",
+              marginLeft: "auto",
+              marginRight: "auto",
+            }}
+          >
+            {post.contents}
+          </Typography>
         </AccordionDetails>
       </Accordion>
     </div>

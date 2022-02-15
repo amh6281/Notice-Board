@@ -27,10 +27,13 @@ export default function CategoryList({ post: p }) {
           <Button variant="contained" key={category.id}>
             <Link
               to={`/category/${category.category}`}
-              style={{ textDecoration: "none", color: "white" }}
+              style={{
+                textDecoration: "none",
+                color: "white",
+              }}
             >
               {/*category.category는 dummy data에 있는 categorys의 category*/}
-              Category {category.category}
+              {category.category}
             </Link>
           </Button>
         ))}

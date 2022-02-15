@@ -16,14 +16,30 @@ export default function AllPost() {
               aria-controls="panel1a-content"
               id="panel1a-header"
             >
-              <Typography>{post.title}</Typography>
+              <Typography
+                style={{
+                  display: "table",
+                  marginLeft: "auto",
+                  marginRight: "auto",
+                }}
+              >
+                {post.title}
+              </Typography>
             </AccordionSummary>
             <AccordionDetails
               expandIcon={<ExpandMoreIcon />}
               aria-controls="panel1a-content"
               id="panel1a-header"
             >
-              <Typography>{post.contents}</Typography>
+              <Typography
+                style={{
+                  display: "table",
+                  marginLeft: "auto",
+                  marginRight: "auto",
+                }}
+              >
+                {post.contents}
+              </Typography>
             </AccordionDetails>
           </Accordion>
         </div>

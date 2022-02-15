@@ -1,6 +1,8 @@
 import useFetch from "../../hooks/useFetch";
 import { useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Box from "@mui/material/Box";
+import TextField from "@mui/material/TextField";
 
 export default function CreatePost() {
   const categorys = useFetch("http://localhost:3001/categorys");
@@ -38,17 +40,81 @@ export default function CreatePost() {
 
   return (
     <form onSubmit={onSubmit}>
-      <div>
-        <label>제목</label>
-        <input type="text" placeholder="제목을 써주세요." ref={titleRef} />
+      <div
+        style={{
+          marginBottom: "10px",
+        }}
+      >
+        <label
+          style={{
+            display: "block",
+            marginBottom: "10px",
+          }}
+        >
+          제목
+        </label>
+        <input
+          type="text"
+          placeholder="제목을 써주세요."
+          ref={titleRef}
+          style={{
+            width: "400px",
+            height: "40px",
+            fontSize: "20px",
+            paddingTop: "0px",
+            paddingBottom: "0px",
+            padding: "10px",
+          }}
+        />
       </div>
-      <div>
-        <label>내용</label>
-        <input type="text" placeholder="내용을 써주세요." ref={contentsRef} />
+      <div
+        style={{
+          marginBottom: "10px",
+        }}
+      >
+        <label
+          style={{
+            display: "block",
+            marginBottom: "10px",
+          }}
+        >
+          내용
+        </label>
+        <input
+          type="text"
+          placeholder="내용을 써주세요."
+          ref={contentsRef}
+          style={{
+            width: "400px",
+            height: "40px",
+            fontSize: "20px",
+            paddingTop: "0px",
+            paddingBottom: "0px",
+            padding: "10px",
+          }}
+        />
       </div>
-      <div>
-        <label>게시판</label>
-        <select ref={categoryRef}>
+      <div
+        style={{
+          marginBottom: "10px",
+        }}
+      >
+        <label
+          style={{
+            display: "block",
+            marginBottom: "10px",
+          }}
+        >
+          게시판
+        </label>
+        <select
+          ref={categoryRef}
+          style={{
+            width: "400px",
+            height: "40px",
+            fontSize: "20px",
+          }}
+        >
           {categorys.map((category) => (
             <option key={category.id} value={category.category}>
               {category.category}
@@ -59,6 +125,13 @@ export default function CreatePost() {
       <button
         style={{
           opacity: isLoading ? 0.3 : 1,
+          padding: "10px",
+          fontSize: "18px",
+          cursor: "pointer",
+          border: "none",
+          borderRadius: "6px",
+          color: "white",
+          backgroundColor: "dodgerblue",
         }}
       >
         {isLoading ? "Saving..." : "저장하기"}
