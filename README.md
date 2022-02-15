@@ -3,11 +3,13 @@
  <h4>React 기반의 게시판입니다.</h4>
   </div>
 <div align="center">
+  <img src="https://user-images.githubusercontent.com/83646986/154008229-ec4fea7f-6094-4cee-951f-62ebc7711036.gif" />
 </div>
+
 <br>
 
 ## 💪 Skills
-<img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"/> <img src="https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white"/>
+<img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"/> <img src="https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white"/> <img src="https://img.shields.io/badge/Material%20UI-007FFF?style=for-the-badge&logo=mui&logoColor=white" /> <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" />
 
 <br/>
 
